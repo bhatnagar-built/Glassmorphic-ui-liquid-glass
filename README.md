@@ -12,6 +12,10 @@
 
 [Live Interactive Showcase](https://bhatnagar-built.github.io/ui-liquid-glass/) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Components](#-components) • [Optics & Theming](#-optics--theming)
 
+<br />
+
+<img src="assets/images/hero-showcase.jpg" alt="Liquid Glass UI Showcase" width="100%" style="border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" />
+
 ---
 
 </div>
@@ -25,6 +29,27 @@
 - ⚡️ **Zero Bloat & Blazing Fast**: Hardware-accelerated CSS variables, SVG filter pipelines, and modern React hooks — no heavy third-party runtimes.
 - 🛠 **Full TypeScript Precision**: 100% typed with comprehensive IntelliSense and pre-bundled `.d.ts` declaration maps.
 - 🧩 **Production-Ready Components**: 10+ modular components including scenes, cards, buttons, floating dock toolbars, tabs, sliders, switches, and badges.
+
+---
+
+## 🖼 Visual Previews
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%" align="center">
+        <img src="assets/images/liquid-titanium-card.jpg" alt="Liquid Titanium Glass Card" style="border-radius: 12px;" />
+        <br />
+        <b>3D Angled FinTech Glass Card with Specular Sheen & Chromatic Edges</b>
+      </td>
+      <td width="50%" align="center">
+        <img src="assets/images/components-matrix.jpg" alt="Liquid Glass Design System" style="border-radius: 12px;" />
+        <br />
+        <b>Component Matrix: Buttons, Switches, Sliders, Tabs & Floating Dock</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
