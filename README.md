@@ -10,7 +10,7 @@
 [![Vite](https://img.shields.io/badge/Vite-6.x-646cff.svg)](https://vitejs.dev/)
 [![Author: Abhishek Bhatnagar](https://img.shields.io/badge/Author-Abhishek%20Bhatnagar-38bdf8.svg)](https://github.com/bhatnagar-built)
 
-[Live Interactive Showcase](https://bhatnagar-built.github.io/ui-liquid-glass/) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Components](#-components) • [Optics & Theming](#-optics--theming)
+[Live Interactive Showcase](https://bhatnagar-built.github.io/Glassmorphic-ui-liquid-glass/) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Components](#-components) • [Optics & Theming](#-optics--theming)
 
 <br />
 
@@ -179,10 +179,10 @@ You can configure materials on `<LiquidGlassScene>` or override them per compone
 
 ```bash
 # Clone the repository
-git clone https://github.com/bhatnagar-built/ui-liquid-glass.git
+git clone https://github.com/bhatnagar-built/Glassmorphic-ui-liquid-glass.git
 
 # Enter project directory
-cd ui-liquid-glass
+cd Glassmorphic-ui-liquid-glass
 
 # Install dependencies
 npm install

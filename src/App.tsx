@@ -196,7 +196,7 @@ export default function App() {
 
             {/* GitHub Repo */}
             <a
-              href="https://github.com/bhatnagar-built/ui-liquid-glass"
+              href="https://github.com/bhatnagar-built/Glassmorphic-ui-liquid-glass"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: 'none' }}
@@ -664,12 +664,12 @@ export default function App() {
         <footer className="p-6 text-center text-xs opacity-60 border-t border-white/10 mt-auto">
           Crafted with &hearts; by Abhishek Bhatnagar &bull; MIT License &bull; Available on GitHub: {' '}
           <a
-            href="https://github.com/bhatnagar-built/ui-liquid-glass"
+            href="https://github.com/bhatnagar-built/Glassmorphic-ui-liquid-glass"
             className="underline hover:text-sky-400"
             target="_blank"
             rel="noopener noreferrer"
           >
-            bhatnagar-built/ui-liquid-glass
+            bhatnagar-built/Glassmorphic-ui-liquid-glass
           </a>
         </footer>
       </div>

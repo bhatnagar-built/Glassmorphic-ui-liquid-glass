@@ -6,9 +6,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bhatnagar-built/ui-liquid-glass.git"
+    "url": "https://github.com/bhatnagar-built/Glassmorphic-ui-liquid-glass.git"
   },
-  "homepage": "https://bhatnagar-built.github.io/ui-liquid-glass/",
+  "homepage": "https://bhatnagar-built.github.io/Glassmorphic-ui-liquid-glass/",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
