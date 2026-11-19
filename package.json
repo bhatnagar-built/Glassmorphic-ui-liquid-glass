@@ -1,0 +1,60 @@
+{
+  "name": "ui-liquid-glass",
+  "version": "1.0.0",
+  "description": "🌊 Ultra-realistic WebGPU Liquid Glassmorphism component library & interactive showcase for React & TypeScript. Live fluid refraction, chromatic dispersion, specular highlights, and tactile physics.",
+  "author": "Abhishek Bhatnagar <abhi.bhatnagar2593@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhatnagar-built/ui-liquid-glass.git"
+  },
+  "homepage": "https://bhatnagar-built.github.io/ui-liquid-glass/",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./style.css": "./dist/ui-liquid-glass.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "liquid-glass",
+    "glassmorphism",
+    "webgpu",
+    "refraction",
+    "svg-filters",
+    "frosted-glass",
+    "ui-components",
+    "design-system",
+    "react-components",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:lib": "tsc && vite build --config vite.config.lib.ts",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "lucide-react": "^0.475.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-dts": "^4.5.0"
+  }
+}

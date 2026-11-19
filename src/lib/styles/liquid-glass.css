@@ -1,0 +1,230 @@
+/* 🌊 ui-liquid-glass Core Stylesheet by Abhishek Bhatnagar */
+
+:root {
+  --lg-primary: #38bdf8;
+  --lg-accent: #818cf8;
+  --lg-ambient-light: rgba(255, 255, 255, 0.85);
+  --lg-ambient-shadow: rgba(0, 0, 0, 0.15);
+  
+  /* Material Presets - Light */
+  --lg-clear-bg: rgba(255, 255, 255, 0.12);
+  --lg-clear-border: rgba(255, 255, 255, 0.45);
+  --lg-clear-blur: 16px;
+
+  --lg-frosted-bg: rgba(255, 255, 255, 0.45);
+  --lg-frosted-border: rgba(255, 255, 255, 0.7);
+  --lg-frosted-blur: 32px;
+
+  --lg-regular-bg: rgba(255, 255, 255, 0.25);
+  --lg-regular-border: rgba(255, 255, 255, 0.55);
+  --lg-regular-blur: 24px;
+
+  --lg-crystal-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.06) 100%);
+  --lg-crystal-border: rgba(255, 255, 255, 0.65);
+  --lg-crystal-blur: 20px;
+
+  --lg-obsidian-bg: rgba(15, 23, 42, 0.65);
+  --lg-obsidian-border: rgba(255, 255, 255, 0.15);
+  --lg-obsidian-blur: 28px;
+}
+
+/* Dark Appearance Overrides */
+[data-lg-appearance="dark"] {
+  --lg-clear-bg: rgba(15, 23, 42, 0.35);
+  --lg-clear-border: rgba(255, 255, 255, 0.16);
+  
+  --lg-frosted-bg: rgba(30, 41, 59, 0.6);
+  --lg-frosted-border: rgba(255, 255, 255, 0.22);
+  
+  --lg-regular-bg: rgba(15, 23, 42, 0.45);
+  --lg-regular-border: rgba(255, 255, 255, 0.18);
+
+  --lg-crystal-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(15, 23, 42, 0.4) 100%);
+  --lg-crystal-border: rgba(255, 255, 255, 0.25);
+
+  --lg-obsidian-bg: rgba(2, 6, 23, 0.85);
+  --lg-obsidian-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Scene Container */
+.lg-scene-container {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  user-select: none;
+}
+
+/* Live Background Refractive Content */
+.lg-scene-content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Foreground Glass Layer */
+.lg-scene-foreground {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+/* Core Liquid Glass Surface */
+.lg-surface {
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s ease,
+              border-color 0.3s ease;
+  will-change: transform, backdrop-filter;
+  overflow: hidden;
+}
+
+.lg-surface::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    var(--lg-light-dir, 135deg),
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Specular Light Reflection Glint */
+.lg-surface::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at var(--lg-pointer-x, 30%) var(--lg-pointer-y, 20%),
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.08) 25%,
+    transparent 55%
+  );
+  opacity: var(--lg-specular-opacity, 0.7);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+/* Interactive Surface Feedback */
+.lg-surface-interactive {
+  cursor: pointer;
+}
+
+.lg-surface-interactive:hover {
+  transform: translateY(-2px);
+  --lg-specular-opacity: 0.95;
+}
+
+.lg-surface-interactive:active {
+  transform: translateY(0) scale(0.985);
+  transition-duration: 0.1s;
+}
+
+/* Glow Effect */
+.lg-surface-glow {
+  box-shadow: 0 12px 36px -8px var(--lg-glow-color, rgba(56, 189, 248, 0.35)),
+              0 2px 10px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Liquid Button */
+.lg-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.lg-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Liquid Switch */
+.lg-switch-track {
+  width: 52px;
+  height: 30px;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lg-switch-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.lg-switch-active .lg-switch-thumb {
+  transform: translateX(22px);
+}
+
+/* Liquid Slider */
+.lg-slider-track {
+  height: 8px;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.lg-slider-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+
+.lg-slider-thumb:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* Toolbar Dock */
+.lg-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+/* Progressive Blur Edge */
+.lg-progressive-blur {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
